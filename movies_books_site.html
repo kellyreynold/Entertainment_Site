@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Information</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Dropdown styles */
+        #location {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .info-container table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        }
+        
+
+        .info-container th, .info-container td {
+            border: 1px solid #ccc;
+            padding: 8px; /* Adjust padding as needed */
+            text-align: left;
+        }
+
+        .info-container th {
+            background-color: #f2f2f2;
+        }
+
+        .info-container td {
+            /* Add specific padding for the td elements */
+            padding-right: 20px; /* Adjust as needed */
+        }
+
+
+/*
+        .info-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .info-container h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .info-container p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666;
+        }
+ */
+
+        /*
+        .location-container {
+            margin-bottom: 20px;
+        }
+        .info-container {
+            display: none;
+            margin-bottom: 20px;
+        }
+        */
+
+    </style>
+</head>
+<body>
+    <div class="location-container">
+        <label for="location">Choose a location:</label>
+        <select id="location">
+            <option value="">Select a location</option>
+            <option value="accra">Accra, Ghana</option>
+            <option value="amsterdam">Amsterdam, Netherlands</option>
+            <option value="athens">Athens, Greece</option>
+            <option value="auckland">Auckland, New Zealand</option>
+            <option value="bangkok">Bangkok, Thailand</option>
+            <option value="berlin">Berlin, Germany</option>
+            <option value="budapest">Budapest, Hungary</option>
+            <option value="cape-town">Cape Town, South Africa</option>
+            <option value="copenhagen">Copenhagen, Denmark</option>
+            <option value="cork">Cork, Ireland</option>
+            <option value="dubai">Dubai, U.A.E</option>
+            <option value="glasgow">Glasgow, Scotland</option>
+            <option value="leuven">Leuven, Belgium</option>
+            <option value="madrid">Madrid, Spain</option>
+            <option value="melbourne">Melbourne, Australia</option>
+            <option value="montpellier">Montpellier, France</option>
+            <option value="newcastle">Newcastle, England</option>
+            <option value="osaka">Osaka, Japan</option>
+            <option value="paris">Paris, France</option>
+            <option value="rome">Rome, Italy</option>
+            <option value="santiago-dr">Santiago, Dominican Republic</option>
+            <option value="santiago">Santiago, Chile</option>
+            <option value="seoul">Seoul, South Korea</option>
+            <option value="singapore">Singapore</option>
+            <option value="stockholm">Stockholm, Sweden</option>
+        </select>
+    </div>
+
+    <div id="accra-info" class="info-container">
+        <h2>Accra, Ghana</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Perfect Picture</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>I Sing of a Well</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>No Time to Die</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Leila</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Homegoing</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Tail of the Blue Bird</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Faceless</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Wife of the Gods</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="amsterdam-info" class="info-container">
+        <h2>Amsterdam, Netherlands</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Fault in our Stars</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Black Book</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Diamonds are Forever</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Kidnapping Mr. Heineken</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Diary of a Young Girl</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Fault in our Stars</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Amsterdam</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Goldfinch</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="athens-info" class="info-container">
+        <h2>Athens, Greece</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mamma Mia</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Boy on a Dolphin</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Le Casse</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>My Life in Ruins</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Iliad</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Zorba the Greek</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Odyssey</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Eleni</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="auckland-info" class="info-container">
+        <h2>Auckland, New Zealand</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Once Were Warriors</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Piano</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Whale Rider</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Boy</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Bone People</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Luminaries</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Once Were Warriors</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Whale Rider</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="bangkok-info" class="info-container">
+        <h2>Bangkok, Thailand</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Hangover Part II</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Only God Forgives</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Bangkok Dangerous</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Beach</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Bangkok 8</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Windup Girl</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Beach</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Private Dancer</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="berlin-info" class="info-container">
+        <h2>Berlin, Germany</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Boy in the Striped Pajamas</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Book Thief</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Bridge of Spies</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Cabaret</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Berlin Alexanderplatz</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Goodbye to Berlin</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>A Woman in Berlin: Eight Weeks in the Conquered City</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Stasiland: Stories from Behind the Berlin Wall</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="budapest-info" class="info-container">
+        <h2>Budapest, Hungary</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>White God</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Sunset</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Budapest Noir</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Red Countess</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Invisible Bridge</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Budapest Noir</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Door</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Bridge at Andau</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="cape-town-info" class="info-container">
+        <h2>Cape Town, South Africa</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Safe House</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>District 9</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Invictus</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Blood Diamond</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Disgrace</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Power of One</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Woman Next Door</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Shark's Egg</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="copenhagen-info" class="info-container">
+        <h2>Copenhagen, Denmark</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Danish Girl</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>A Royal Affair</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Copenhagen</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Flame & Citron</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Little Mermaid</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Smilla's Sense of Snow</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Quiet Girl</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Keeper of Lost Causes</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="cork-info" class="info-container">
+        <h2>Cork, Ireland</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Quiet Man</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Wind that Shakes the Barley</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Michael Collins</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Brooklyn</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Heart's Invisible Furies</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Spinning Heart</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Hushabye Baby</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Ghost of Helen Addison</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="dubai-info" class="info-container">
+        <h2>Dubai, U.A.E</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mission Impossible - Ghost Protocol</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>City of Life</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Dubai</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Syriana</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Sand Fish: a Novel from Dubai</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Dubai in Me</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Dubai Tales</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Billionaire's Apprentice: The Rise of the Indian-American Elite and the Fall of the Galleon Hedge Fund</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="glasgow-info" class="info-container">
+        <h2>Glasgow, Scotland</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Trainspotting</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Angels' Share</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Read Road</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>My Name is Joe</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Legend of Barney Thomson</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Small Faces</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Orphans</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Young Adam</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="leuven-info" class="info-container">
+        <h2>Leuven, Belgium</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dossier K.</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Brabanconne</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Halfweg</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Offline</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Name of the Rose</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Sorrow of Belgium</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>In Bruges</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Charlotte</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="madrid-info" class="info-container">
+        <h2>Madrid, Spain</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Volver</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Todo Sobre Mi Madre</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Flower of my Secret</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Skin I live In</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Shadow of the Wind</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Seamstress</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Fencing Master</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Time in Between</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="melbourne-info" class="info-container">
+        <h2>Melbourne, Australia</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Castle</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Chopper</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Anyone But You</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Romper Stomper</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Animal Kingdom</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Big Steal</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Noise</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Two Hands</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="montpellier-info" class="info-container">
+        <h2>Accra, Ghana</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Le Passager de L’ete</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Amelie</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Midnight in Paris</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Les Miserables</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Lady Agnes Mystery: Volume 1</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Death of a Scholar</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Montpellier Vu Par</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Les Miserables</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="newcastle-info" class="info-container">
+        <h2>Accra, Ghana</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Get Carter</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Purely Belter</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Goal!</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Stormy Monday</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Magician's Nephew</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Geordie Pride</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Unlikely Pilgrimage of Harold Fry</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Inspector Ramsay</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="osaka-info" class="info-container">
+        <h2>Osaka, Japan</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kamikaze Girls</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Like Father, Like Son</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Chef of South Polar</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Fast and the Furious: Tokyo Drift</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Wind-Up Bird Chronicle</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Confessions of a Mask</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Kitchen</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Garden of Evening Mists</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="paris-info" class="info-container">
+        <h2>Paris, France</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Amelie</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Midnight in Paris</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>La Haine</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Intouchables</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Paris Wife</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Les Miserables</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Little Paris Bookshop</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Da Vinci Code</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="rome-info" class="info-container">
+        <h2>Rome, Italy</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Roman Holiday</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Gladiator</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>La Dolce Vita</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Three Coins in the Fountain</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Angels & Demons</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Name of the Rose</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>I, Claudius</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Talented Mr. Ripley</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="santiago-dr-info" class="info-container">
+        <h2>Santiago, Dominican Republic</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cristo Rey</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Lotoman</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Lo Que Siento Por Ti</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Yuniol</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Brief Wondrous Life of Oscar Wao</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>How the Garcia Girls Lost Their Accents</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Farming of Bones</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>In the Time of the Butterflies</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="santiago-info" class="info-container">
+        <h2>Santiago, Chile</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>No</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Gloria</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Machuca</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Tony Manero</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The House of the Spirits</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>By Night in Chile</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>My Invented Country: a Memoir</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Neruda Case</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="seoul-info" class="info-container">
+        <h2>Seoul, South Korea</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Parasite</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Oldboy</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Train to Busan</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>My Sassy Girl</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Please Look After Mom</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Vegetarian</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Pachinko</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Your Republic is Calling You</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="singapore-info" class="info-container">
+        <h2>Singapore</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Crazy Rich Asians</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Singapore Dreaming</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Ilo Ilo</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Ah Boys to Men</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Crazy Rich Asians</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Singapore Grip</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Garden of Evening Mists</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Art of Charlie Chan Hock Chye</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="stockholm-info" class="info-container">
+        <h2>Stockholm, Sweden</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Entertainment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Girl With The Dragon Tattoo</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Square</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Let The Right One In</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>Stockholm</td>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <td>The Girl With The Dragon Tattoo</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>Let The Right One In</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Hundred-Year-Old Man Who Climbed Out The Window and Disappeared</td>
+                    <td>Book</td>
+                </tr>
+                <tr>
+                    <td>The Ice Princess</td>
+                    <td>Book</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const locationSelect = document.getElementById('location');
+
+        // Event listener for location select change
+        locationSelect.addEventListener('change', function() {
+            const selectedLocation = this.value;
+            const allInfoContainers = document.querySelectorAll('.info-container');
+            
+            allInfoContainers.forEach(container => {
+                if (container.id === `${selectedLocation}-info`) {
+                    container.style.display = 'block';
+                } else {
+                    container.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Information</title>
+    <style>
+        /* Add CSS styles for your webpage */
+        /* This is just an example, you can customize it further */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Dropdown styles */
+        #location {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Info container styles */
+        .info-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .info-container h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Checkbox styles */
+        .filter-container {
+            margin-top: 10px;
+        }
+
+        .filter-container label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="location-container">
+            <form id="locationForm">
+                <label for="location">Choose a location:</label>
+                <select id="location">
+                    <option value="">Select a location</option>
+                    <option value="accra">Accra, Ghana</option>
+                    <option value="amsterdam">Amsterdam, Netherlands</option>
+                    <option value="athens">Athens, Greece</option>
+                    <option value="athens">Athens, Greece</option>
+                    <option value="auckland">Auckland, New Zealand</option>
+                    <option value="bangkok">Bangkok, Thailand</option>
+                    <option value="berlin">Berlin, Germany</option>
+                    <option value="budapest">Budapest, Hungary</option>
+                    <option value="cape-town">Cape Town, South Africa</option>
+                    <option value="copenhagen">Copenhagen, Denmark</option>
+                    <option value="cork">Cork, Ireland</option>
+                    <option value="dubai">Dubai, U.A.E</option>
+                    <option value="glasgow">Glasgow, Scotland</option>
+                    <option value="leuven">Leuven, Belgium</option>
+                    <option value="madrid">Madrid, Spain</option>
+                    <option value="melbourne">Melbourne, Australia</option>
+                    <option value="montpellier">Montpellier, France</option>
+                    <option value="newcastle">Newcastle, England</option>
+                    <option value="osaka">Osaka, Japan</option>
+                    <option value="paris">Paris, France</option>
+                    <option value="rome">Rome, Italy</option>
+                    <option value="santiago-dr">Santiago, Dominican Republic</option>
+                    <option value="santiago">Santiago, Chile</option>
+                    <option value="seoul">Seoul, South Korea</option>
+                    <option value="singapore">Singapore</option>
+                    <option value="stockholm">Stockholm, Sweden</option>
+                </select>
+                <input type="submit" value="Search">
+                <input type="hidden" id="selectedLocation" name="selectedLocation">
+            </form>
+        </div>
+
+        <div id="resultContainer">
+            
+        </div>
+
+        <script>
+            const locationSelect = document.getElementById('location');
+            const allInfoContainers = document.querySelectorAll('.info-container');
+
+            // Event listener for location select change
+            locationSelect.addEventListener('change', function() {
+                const selectedLocation = this.value;
+                
+                allInfoContainers.forEach(container => {
+                    if (container.id === `${selectedLocation}-info`) {
+                        container.classList.add('active');
+                    } else {
+                        container.classList.remove('active');
+                    }
+                });
+            });
+        </script>
+
+    </div>
+</body>
+</html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Information</title>
+</head>
+<body>
+    <div class="container">
+        <div class="location-container">
+            <label for="location">Choose a location:</label>
+            <select id="location" onchange="showLocationInfo(this.value)">
+                <option value="">Select a location</option>
+                <option value="Accra">Accra, Ghana</option>
+                <option value="Amsterdam">Amsterdam, Netherlands</option>
+                <option value="athens">Athens, Greece</option>
+                <option value="auckland">Auckland, New Zealand</option>
+                <option value="bangkok">Bangkok, Thailand</option>
+                <option value="berlin">Berlin, Germany</option>
+                <option value="budapest">Budapest, Hungary</option>
+                <option value="cape-town">Cape Town, South Africa</option>
+                <option value="copenhagen">Copenhagen, Denmark</option>
+                <option value="cork">Cork, Ireland</option>
+                <option value="dubai">Dubai, U.A.E</option>
+                <option value="glasgow">Glasgow, Scotland</option>
+                <option value="leuven">Leuven, Belgium</option>
+                <option value="madrid">Madrid, Spain</option>
+                <option value="melbourne">Melbourne, Australia</option>
+                <option value="montpellier">Montpellier, France</option>
+                <option value="newcastle">Newcastle, England</option>
+                <option value="osaka">Osaka, Japan</option>
+                <option value="paris">Paris, France</option>
+                <option value="rome">Rome, Italy</option>
+                <option value="santiago-dr">Santiago, Dominican Republic</option>
+                <option value="santiago">Santiago, Chile</option>
+                <option value="seoul">Seoul, South Korea</option>
+                <option value="singapore">Singapore</option>
+                <option value="stockholm">Stockholm, Sweden</option>
+            </select>
+        </div>
+
+        <div id="location-info" class="info-container">
+            {content}
+        </div>
+    </div>
+
+    <script>
+        function showLocationInfo(location) {
+            if (!location) {
+                document.getElementById('location-info').innerHTML = '';
+                return;
+            }
+
+            // Send the selected location to Python script to get HTML content
+            fetch('/get_location_info', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ location: location })
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('location-info').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
+-->
