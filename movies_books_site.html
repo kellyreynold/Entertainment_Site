@@ -15,6 +15,18 @@
             background-repeat: no-repeat; /
         }
 
+        .logo {
+            position: fixed; /* Fix the position */
+            top: 5; /* Position at the top */
+            left: 0; /* Position at the left */
+            width: 100%; /* Full width */
+            background-color: #333; /* Background color of the logo area */
+            color: #fff; /* Text color */
+            padding: 10px 20px; /* Padding for the logo content */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+            z-index: 1000; /* Ensure the logo is above other content */
+        }
+
         .container {
             max-width: 800px;
             margin: 20px auto;
@@ -34,9 +46,9 @@
         }
 
         .info-container table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
         
 
@@ -44,10 +56,11 @@
             border: 1px solid #ccc;
             padding: 8px; /* Adjust padding as needed */
             text-align: left;
+            background-color: #def8ff;
         }
 
         .info-container th {
-            background-color: #f2f2f2;
+            background-color: #aceefe;
         }
 
         .info-container td {
@@ -55,25 +68,26 @@
             padding-right: 20px; /* Adjust as needed */
         }
 
-
-/*
         .info-container {
             display: none;
             margin-top: 20px;
+            /*background-color: #00004a;*/
         }
 
         .info-container h2 {
             font-size: 24px;
             margin-bottom: 10px;
             color: #333;
+            /*background-color: #00004a;*/
         }
 
         .info-container p {
             font-size: 16px;
             line-height: 1.5;
             color: #666;
+            background-color: #00004a;
         }
- */
+ 
 
         /*
         .location-container {
@@ -88,6 +102,10 @@
     </style>
 </head>
 <body>
+    <div class="logo">
+        <img src="path/to/your/logo.png" alt="Logo" style="max-width: 100px; height: auto;">
+    </div>
+    
     <div class="location-container">
         <label for="location">Choose a location:</label>
         <select id="location">
@@ -1171,52 +1189,112 @@
                 <tr>
                     <th>Name</th>
                     <th>Entertainment Type</th>
+                    <th>Rating</th>
+                    <th>Platform Availability</th>
+                    <th>Tour Option</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Amelie</td>
                     <td>Movie</td>
+                    <td>8.3/10</td>
+                    <td>For rent:<br>
+                        <span style="margin-left: 10px;"><a href="https://www.youtube.com/watch?v=EHcud1WT3Wg">Youtube</a> ($3.59)</span><br>
+                        <span style="margin-left: 10px;"><a href="https://www.amazon.com/Amelie-Mathieu-Kassovitz/dp/B0B8QS732F/ref=sr_1_1?crid=1JBSWAQ5DIK6H&dib=eyJ2IjoiMSJ9.qxw4O8UHIRaQGG_HpobRMJlUTR633vejtyV1-ZdDq40-cTP7hlz3MRTM8GTwhsCAU8yb8zf26gqgBEcbG3soPGUrWMoLpHVuj9obqptzxIiogR0HhZ07XjjmyJp80hGqdwgvLYh_ffhMvG69oWz7SItyKT0jWFfC2V00CMZRvYqiAuvKsfzqP8YWNnAfUIC5BpYnkTdretiT74PdCgrU4l6zxIdkyfB4airl8vsGL7M.Wt95pEKJgRSBXwNeJ-RBOWA_pJGaQr51eq9-vWW009g&dib_tag=se&keywords=amelie+movie&qid=1713885791&s=instant-video&sprefix=amelie+movi%2Cinstant-video%2C81&sr=1-1">Amazon Prime Video</a> ($3.59)</span><br>
+                        <span style="margin-left: 10px;"><a href="https://tv.apple.com/?mttn3pid=Google%20AdWords&mttnagencyid=a5e&mttncc=US&mttnsiteid=143238&mttnsubad=OUS2019801_1-688276416623-c&mttnsubkw=75222244264__w3jcHrts_&mttnsubplmnt=_adext_">Apple TV</a> ($3.99)</span><br>
+                    </td>
                 </tr>
                 <tr>
                     <td>Midnight in Paris</td>
                     <td>Movie</td>
+                    <td>7.6/10</td>
+                    <td>For rent:<br>
+                        <span style="margin-left: 10px;"><a href="https://www.youtube.com/watch?v=-NoGpkSTK8k">Youtube</a> ($3.59)</span><br>
+                        <span style="margin-left: 10px;"><a href="https://www.amazon.com/Midnight-Paris-Kathy-Bates/dp/B00948EPOQ/ref=sr_1_1?crid=3GC6P0KNVGKFG&dib=eyJ2IjoiMSJ9.M2tRsyD4xwnfCLvRW_YCxjbqV4xea5ZRoq8gjNGZK_WjHwCmM3Of7vd8ZPlsC_vPOsMw_pHdqqwZCCaNWo0qN27hthZxV6PWjJzf3G4LrUu082zPiRZZHyom-Cl_5ANml82kDD1f2kokN0ZZMXUGM8k_HN-7S-Fwt8EBAnf4UwUGFfmS4wms3GPpw8WTIJT_1xqwRSyFjKIpGlZGABz4NSgRkXIB8A0YASjOG_YK5UM.4-SZMEqCHgHpVWewaqY_zAdKowUvum3yN9dU9Q2RelQ&dib_tag=se&keywords=midnight+in+paris&qid=1713886600&s=instant-video&sprefix=midnight+in+paris%2Cinstant-video%2C62&sr=1-1">Amazon Prime Video</a> ($3.59)</span><br>
+                        <span style="margin-left: 10px;"><a href="https://tv.apple.com/?mttn3pid=Google%20AdWords&mttnagencyid=a5e&mttncc=US&mttnsiteid=143238&mttnsubad=OUS2019801_1-688276416623-c&mttnsubkw=75222244264__w3jcHrts_&mttnsubplmnt=_adext_">Apple TV</a> ($3.99)</span><br>
+                    </td>
                 </tr>
                 <tr>
                     <td>La Haine</td>
                     <td>Movie</td>
+                    <td>8.1/10</td>
+                    <td>For rent:<br>
+                        <span style="margin-left: 10px;"><a href="https://www.amazon.com/Haine-English-Subtitled-Vincent-Cassel/dp/B00A5IZABQ/ref=sr_1_1?crid=1CCZM1YJQ4Y8M&dib=eyJ2IjoiMSJ9.jANM4ng764ino-WHdf2ShNsNjPg6DMeE8mH33adm3jq_0lvaubJSusR53r8pPc0u2V7Ca9yOSekpls_MP_G6Yp7wXDugv1bFt0NlQw3JBB5jN6JwtzEzm_qtJfW5GlohswXyWQ_UHOFFlUo4An9uw3lTcjwmneZoJ0_1BI5zFvuhqgDZ2Uwbihf7tiBseu07rK59CTqFVMMtLuchhd9tGUecJ79DDPhiP2nKGIgTJ8E.v2Zmk0rjiuKzy3Wr9tu_6XQssA2VGQhnr8v7ZJNriDE&dib_tag=se&keywords=la+haine&qid=1713892385&s=instant-video&sprefix=la+haine%2Cinstant-video%2C64&sr=1-1">Amazon Prime Video</a> ($3.59)</span><br>
+                        <span style="margin-left: 10px;"><a href="https://tv.apple.com/?mttn3pid=Google%20AdWords&mttnagencyid=a5e&mttncc=US&mttnsiteid=143238&mttnsubad=OUS2019801_1-688276416623-c&mttnsubkw=75222244264__w3jcHrts_&mttnsubplmnt=_adext_">Apple TV</a> ($3.99)</span><br>
+                    </td>
                 </tr>
                 <tr>
                     <td>The Intouchables</td>
                     <td>Movie</td>
+                    <td>8.5/10</td>
+                    <td>For rent:<br>
+                        <span style="margin-left: 10px;"><a href="https://www.amazon.com/Intouchables-Francois-Cluzet/dp/B0BY3XNJ1M/ref=sr_1_1?crid=39XPRIYZB5GPZ&dib=eyJ2IjoiMSJ9.S6nhFNm4ovm2LQgDaoWwqA_DvIzYcWXWuGpcWXsplS6h2gyQWuZiuH7QO5xB3p9JIj0YHg_PgHFA-4uuPJBZiD1oj7OXqsnZMbB51FYnOAn4gN2dnPqxysZWiykWuri7K0gpYvjABeZKl09d63MN36Q3GwIcoNLNyN101wgUa-xZiHCBDpClFRtuyAuVA0JI-sEwCRGZqG2JOqm3pOXtMXsVCeYAOw8kaiIASqDTOR8.uWvP4idZFLZSdUoPbJBZeAWyzVTUxgeasnrItT9Gww8&dib_tag=se&keywords=the+intouchables&qid=1713892474&s=instant-video&sprefix=the+intouchables%2Cinstant-video%2C68&sr=1-1">Amazon Prime Video</a> ($3.79)</span><br>
+                        <span style="margin-left: 10px;"><a href="https://www.youtube.com/watch?v=dGJfkFlQQl4">Youtube</a> (Free with Ads)</span><br>
+                        <span style="margin-left: 10px;"><a href="https://tv.apple.com/?mttn3pid=Google%20AdWords&mttnagencyid=a5e&mttncc=US&mttnsiteid=143238&mttnsubad=OUS2019801_1-688276416623-c&mttnsubkw=75222244264__w3jcHrts_&mttnsubplmnt=_adext_">Apple TV</a> ($3.99)</span><br>
+                    </td>
                 </tr>
                 <tr>
                     <td>The Paris Wife</td>
                     <td>Book</td>
+                    <td>3.8/5</td>
+                    <td>For purchase:<br>
+                        <span style="margin-left: 10px;"><a href="https://www.amazon.com/Paris-Wife-Paula-McLain/dp/0345521315">Amazon</a> ($6.70 - $14.99)</span><br>
+                    </td>
                 </tr>
                 <tr>
                     <td>Les Miserables</td>
                     <td>Book</td>
+                    <td>4.2/5</td>
+                    <td>For purchase:<br>
+                        <span style="margin-left: 10px;"><a href="https://www.amazon.com/Miserables-Penguin-Classics-Victor-Hugo/dp/0140444300">Amazon</a> ($22.07 - $23.99)</span><br>
+                    </td>
                 </tr>
                 <tr>
                     <td>The Little Paris Bookshop</td>
                     <td>Book</td>
+                    <td>3.5/5</td>
+                    <td>For purchase:<br>
+                        <span style="margin-left: 10px;"><a href="https://www.amazon.com/Little-Paris-Bookshop-Novel/dp/1594139652">Amazon</a> ($12.94 - $13.58)</span><br>
+                    </td>
                 </tr>
                 <tr>
                     <td>The Da Vinci Code</td>
                     <td>Book</td>
+                    <td>3.9/5</td>
+                    <td>For purchase:<br>
+                        <span style="margin-left: 10px;"><a href="https://www.amazon.com/Vinci-Code-Robert-Langdon/dp/0307474275">Amazon</a> ($1.67 - $14.30)</span><br>
+                    </td>
                 </tr>
                 <tr>
                     <td>Emily In Paris</td>
                     <td>TV Show</td>
+                    <td>6.9/10</td>
+                    <td>With Subscriptions:<br>
+                        <span style="margin-left: 10px;"><a href="https://www.netflix.com/login">Netflix</a></span><br>
+                        For Rent:<br>
+                        <span style="margin-left: 10px;"><a href="https://www.amazon.com/Cancel-Couture/dp/B09LSRKV92/ref=sr_1_1?crid=139K4H1DYQTS5&dib=eyJ2IjoiMSJ9.HQUdYSo75mEEL_i5OveZtEHe3h8CDMxNwg_n8IXo3BL2jvYHn2HDURZ6sA_jF2qRbGU8fpoiWlRBeiWsy13g4ekBJun2wTgXunJxyU_iJF2Wh2beSYP-nGc4KllrvX8Q4nUS8fICDU4bcrsFMqU6iIlv9naN48OUvwxEvQ26cEFecUp67PN9N9z0yWsbsLmaVoRrwAEJJwgbroTSxu9SETgFjuwOce2Yg9R2PAtdEQg.CAXKbs0UHrKoyG8t-J1Tb8F6kbUPnFQ35JLi4-Z_a2Q&dib_tag=se&keywords=emily+in+paris&qid=1713892861&s=instant-video&sprefix=emily+in+paris%2Cinstant-video%2C85&sr=1-1">Amazon Prime Video</a> (From $1.99)</span><br>
+                    </td>
                 </tr>
                 <tr>
                     <td>Lupin</td>
                     <td>TV Show</td>
+                    <td>7.5/10</td>
+                    <td>With Subscriptions:<br>
+                        <span style="margin-left: 10px;"><a href="https://www.netflix.com/login">Netflix</a></span><br>
+                    </td>
                 </tr>
                 <tr>
                     <td>Versailles</td>
                     <td>TV Show</td>
+                    <td>7.9/10</td>
+                    <td>With Subscriptions:<br>
+                        <span style="margin-left: 10px;"><a href="https://www.amazon.com/Who-Will-Guard-Guards-Themselves/dp/B0CW3PKC1K/ref=sr_1_1?crid=3KZJK2AHVLOSZ&dib=eyJ2IjoiMSJ9.2odlj5H61ZwHkGKmyJR3-hgVFr0M6krhbqfV3LAcCeMLeygdo0hPeRchv_qjmjToxytvHEbB-sqrP8CzQe5Rdk5-SZai0zEn0cx9EMS6WhRFHC3OCp11CslhXzenNxKUvxuUsGR0iBpcDOB7Xp-fsPvatf3gUUwRNUsfVdBAGPaNNvyTynAwrTT8Vjcm2dwYRgUP7wc_eHzE2otpIOYpi0tHFefqcrMoKkBggoNkiOo.q0LXzmnRpdk-6B2y85tV5GU0yWJRA2eDgOMY9hLh9dE&dib_tag=se&keywords=versailles&qid=1713893038&s=instant-video&sprefix=versailles%2Cinstant-video%2C96&sr=1-1">Amazon Prime Video</a></span><br>
+                        <span style="margin-left: 10px;"><a href="https://www.netflix.com/login">Netflix</a></span><br>
+                        For Rent:<br>
+                        <span style="margin-left: 10px;"><a href="https://www.youtube.com/show/SCGrgWkScnl6fRBUOuuRx0CA?season=1&sbp=CgEx">Youtube</a> ($1.99)</span><br>
+                        <span style="margin-left: 10px;"><a href="https://tv.apple.com/?mttn3pid=Google%20AdWords&mttnagencyid=a5e&mttncc=US&mttnsiteid=143238&mttnsubad=OUS2019801_1-688276416623-c&mttnsubkw=75222244264__w3jcHrts_&mttnsubplmnt=_adext_">Apple TV</a> ($1.99)</span><br>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -1583,6 +1661,7 @@
             });
         });
     </script>
+
 </body>
 </html>
 
