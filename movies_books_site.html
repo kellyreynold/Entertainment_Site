@@ -17,14 +17,29 @@
 
         .logo {
             position: fixed; /* Fix the position */
-            top: 5; /* Position at the top */
-            left: 0; /* Position at the left */
-            width: 100%; /* Full width */
-            background-color: #333; /* Background color of the logo area */
-            color: #fff; /* Text color */
-            padding: 10px 20px; /* Padding for the logo content */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
-            z-index: 1000; /* Ensure the logo is above other content */
+            top: 50%; /* Position at the top */
+            left: 50%; /* Position at the left */
+            /*width: 100%; /* Full width */
+            transform: translate(-50%, -50%); /* Center the logo */
+            z-index: 1000;
+            width: 400px;
+            height: 400px;
+            /*background-color: #333; /* Background color of the logo area */
+            /*color: #fff; /* Text color */
+            /*background-image: url('Immerse Me (1).png');
+            background-size: contain;
+            width: 400px;
+            height: 400px;
+            /*padding: 10px 20px; /* Padding for the logo content */
+            /*background-clip: content-box;
+            /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+            /*z-index: 1000; /* Ensure the logo is above other content */
+        }
+
+        .logo img {
+            width: 100%; /* Make sure the image fills the container */
+            height: 100%; /* Make sure the image fills the container */
+            object-fit: contain; /* Maintain aspect ratio and fit the image within the container */
         }
 
         .container {
@@ -102,13 +117,13 @@
     </style>
 </head>
 <body>
-    <div class="logo">
-        <img src="path/to/your/logo.png" alt="Logo" style="max-width: 100px; height: auto;">
+    <div class="logo" id="logo">
+        <img src="Immerse Me (1).png" alt="Logo">
     </div>
-    
+
     <div class="location-container">
         <label for="location">Choose a location:</label>
-        <select id="location">
+        <select id="location" onchange="handleSelection()">
             <option value="">Select a location</option>
             <option value="accra">Accra, Ghana</option>
             <option value="amsterdam">Amsterdam, Netherlands</option>
@@ -1187,16 +1202,17 @@
         <table>
             <thead>
                 <tr>
+                    <th> </th>
                     <th>Name</th>
                     <th>Entertainment Type</th>
                     <th>Rating</th>
                     <th>Platform Availability</th>
-                    <th>Tour Option</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Amelie</td>
+                    <td><img src="Amelie.jpg" alt="Amelie Image" width="50" height="70"></td>
+                    <td>Amélie</td>
                     <td>Movie</td>
                     <td>8.3/10</td>
                     <td>For rent:<br>
@@ -1206,6 +1222,7 @@
                     </td>
                 </tr>
                 <tr>
+                    <td><img src="Midnight_in_paris.jpg" alt="Midnight in Paris Image" width="50" height="70"></td>
                     <td>Midnight in Paris</td>
                     <td>Movie</td>
                     <td>7.6/10</td>
@@ -1216,6 +1233,7 @@
                     </td>
                 </tr>
                 <tr>
+                    <td><img src="La_haine.jpg" alt="La Haine Image" width="50" height="70"></td>
                     <td>La Haine</td>
                     <td>Movie</td>
                     <td>8.1/10</td>
@@ -1225,6 +1243,7 @@
                     </td>
                 </tr>
                 <tr>
+                    <td><img src="Intouchables.jpg" alt="The Intouchables Image" width="50" height="70"></td>
                     <td>The Intouchables</td>
                     <td>Movie</td>
                     <td>8.5/10</td>
@@ -1235,6 +1254,7 @@
                     </td>
                 </tr>
                 <tr>
+                    <td><img src="The_paris_wife.jpg" alt="The Paris Wife Image" width="50" height="70"></td>
                     <td>The Paris Wife</td>
                     <td>Book</td>
                     <td>3.8/5</td>
@@ -1243,7 +1263,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Les Miserables</td>
+                    <td><img src="Les_miserables.jpg" alt="Les Miserables Image" width="50" height="70"></td>
+                    <td>Les Misérables</td>
                     <td>Book</td>
                     <td>4.2/5</td>
                     <td>For purchase:<br>
@@ -1251,6 +1272,7 @@
                     </td>
                 </tr>
                 <tr>
+                    <td><img src="The_little_paris_bookshop.jpg" alt="The Little Paris Bookshop Image" width="50" height="70"></td>
                     <td>The Little Paris Bookshop</td>
                     <td>Book</td>
                     <td>3.5/5</td>
@@ -1259,6 +1281,7 @@
                     </td>
                 </tr>
                 <tr>
+                    <td><img src="The_da_vinci_code.jpg" alt="The Da Vinci Code Image" width="50" height="70"></td>
                     <td>The Da Vinci Code</td>
                     <td>Book</td>
                     <td>3.9/5</td>
@@ -1267,6 +1290,7 @@
                     </td>
                 </tr>
                 <tr>
+                    <td><img src="Emily_in_paris.jpg" alt="Emily In Paris Image" width="50" height="70"></td>
                     <td>Emily In Paris</td>
                     <td>TV Show</td>
                     <td>6.9/10</td>
@@ -1277,6 +1301,7 @@
                     </td>
                 </tr>
                 <tr>
+                    <td><img src="Lupin.jpg" alt="Lupin Image" width="50" height="70"></td>
                     <td>Lupin</td>
                     <td>TV Show</td>
                     <td>7.5/10</td>
@@ -1285,6 +1310,7 @@
                     </td>
                 </tr>
                 <tr>
+                    <td><img src="Versailles.jpg" alt="Versailles Image" width="50" height="70"></td>
                     <td>Versailles</td>
                     <td>TV Show</td>
                     <td>7.9/10</td>
@@ -1660,6 +1686,15 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        function handleSelection() {
+            var logo = document.getElementById('logo');
+            if (logo) {
+                logo.style.display = 'none';
+            }
+        }
     </script>
 
 </body>
